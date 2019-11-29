@@ -1,0 +1,23 @@
+header{
+  display: flex;
+  background-color: var(--blue_9);
+  color: var(--blue_1);
+  font-family: 'Oswald';
+  grid-area: header;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 6px var(--right_margin) 6px var(--left_margin);
+
+  ul.topnav{
+    display: flex;
+    list-style-type: none;
+    li {
+      margin-left: 1rem;
+      font-size: 1rem;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

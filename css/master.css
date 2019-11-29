@@ -1,0 +1,78 @@
+:root{
+  --left_margin: 8px;
+  --right_margin: 8px;
+
+  --blue_1: #121879;
+  --blue_8: #bed9f9;
+  --blue_9: #9cc4f4;
+}
+
+* {
+  font-family: 'Crimson Pro'; //Markazi Text';
+  font-weight: 400;
+}
+
+@supports (font-variation-settings: "wght" 400) {
+  * {
+    font-family: 'Crimson Pro';
+    font-weight: 400;
+    /* font-family: 'Markazi Text';
+    font-weight: 450; */
+  }
+}
+
+html{}
+
+body{
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+div.pagewrap{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: auto minmax(10ch, 1fr) 80px;
+  grid-template-areas: "header header"
+                       "sidebar main"
+                       "footer footer";
+}
+
+header{
+  display: flex;
+  background-color: var(--blue_9);
+  color: var(--blue_1);
+  font-family: 'Oswald';
+  grid-area: header;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 6px var(--right_margin) 6px var(--left_margin);
+}
+
+header ul.topnav{
+  display: flex;
+  list-style-type: none;
+}
+
+header  ul.topnav li {
+  margin-left: 1rem;
+}
+
+
+footer{
+  background-color: #efefef;
+  padding: 0 var(--right_margin) 0 var(--left_margin);
+  grid-area: footer;
+}
+
+div.sidebar{
+  grid-area: sidebar;
+  font-weight: 200;
+  margin: 0 0 0 var(--left_margin);
+}
+
+div.main{
+  grid-area: main;
+  margin: 0 var(--right_margin) 0 0;
+}
