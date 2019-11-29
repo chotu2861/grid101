@@ -1,23 +1,40 @@
 header{
   display: flex;
+  justify-content: space-between;
   background-color: var(--blue_9);
   color: var(--blue_1);
-  font-family: 'Oswald';
   grid-area: header;
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0;
   padding: 6px var(--right_margin) 6px var(--left_margin);
+  font-family: 'Oswald';
 
   ul.topnav{
     display: flex;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
     li {
       margin-left: 1rem;
-      font-size: 1rem;
+      font-size: 2rem;
       a {
+        font-family: 'Oswald';
+        color: #f00;
         text-decoration: none;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root{
+    --blue_1: #343434;
+    --blue_8: #bed9f9;
+    --blue_9: #efefef;
+  }
+
+  header{
+    ul.topnav{ display: none; }
   }
 }
